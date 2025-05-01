@@ -1,0 +1,108 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #3aafa9;
+    color: #fff;
+}
+.container{
+    margin: 5% auto;
+    width: 90%;
+    max-width: 700px;
+    padding: 0 10px;
+}
+.display{
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.container h1{
+    color: #feffff;
+    font-weight: 500;
+    font-size: 45px;
+}
+.container h1 span{
+    color: #17252a;
+    font-weight: 500;
+    font-size: 45px;
+    border-bottom: 4px solid #17252a;
+    padding-bottom: 5px;
+}
+.display img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    flex: 1;
+    min-width: 60%;
+    background: transparent;
+    color: #333;
+}
+.container button img{
+    width: 28px;
+    margin-right: 10px;
+    color: #fff;
+}
+.container button{
+    background-color: #17252a;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    margin-top: 30px;
+    transition: all 0.5s;
+    width: 100%;
+} 
+.container button:hover{
+    box-shadow: 2px 2px 20px #254e584e, 2px 2px 20px #254e5845;
+    letter-spacing: 0.5px;
+}
+.container button:active{
+    letter-spacing: 0px;
+    box-shadow: none;
+}
+@media (max-width: 600px){
+    .container h1,
+    .container h1 span{
+        font-size: 32px;
+    }
+    .display{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .display input{
+        font-size: 18px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .display img{
+        align-self: flex-end;
+    }
+    .container button{
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+}
