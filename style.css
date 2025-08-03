@@ -12,12 +12,12 @@ body{
     margin: 5% auto;
     width: 90%;
     max-width: 700px;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 .display{
     width: 100%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     background: #fff;
     color: #333;
     display: flex;
@@ -38,7 +38,76 @@ body{
     font-weight: 500;
     font-size: 45px;
     border-bottom: 4px solid #17252a;
-    padding-bottom: 5px;
+    padding-bottom: 1px;
+}
+.container h3 i{
+    color: #c0c240;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 10px;
+    padding-bottom: 1px;
+}
+#passwordLength{
+    height: 20px;
+    width: 45%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    opacity: 0.5;
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: medium;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+#defaultLabel{
+    opacity: 0.5;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 17px;
+}
+.checkbox{
+    color: #17252a;
+    font-weight: 50;
+    font-size: 20px;
+    padding-bottom: 2px;
+}
+.checkbox input{
+    size: 20px;
+    padding-bottom: 2px;
+}
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: sans-serif;
+  font-size: 14px;
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.checkbox-group label:hover {
+  background: #28aae2;
+}
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #007bff;
+}
+.checkbox-group input[type="checkbox"]:disabled + span {
+  opacity: 0.5;
 }
 .display img{
     width: 30px;
@@ -105,4 +174,14 @@ body{
         font-size: 20px;
         padding: 14px 20px;
     }
+}
+.options-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.options-row label {
+  white-space: nowrap;
 }
