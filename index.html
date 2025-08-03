@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Password Generator</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="shortcut icon" href="./Assets/key.png">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Generate a<br><span>Random Password</span></h1>
-            <div class="display">
-                <input type="text" readonly id="password" placeholder="Password"><img src="./Assets/Custom-Icon-Design-Mono-General-2-Copy.512.png" onclick="copyPass()">
-            </div>
-            <button onclick="createPass()"><img src="./Assets/icons8-flash-24.png">Generate Password</button>
-        </div>
-        <script src="./script.js" async defer></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Password Generator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./Assets/key.png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a<br /><span>Random Password</span></h1>
+      <br />
+      <h3><i>Enter Password Length</i></h3>
+      <div style="display: flex; align-items: center; gap: 0.5em">
+        <input
+          type="number"
+          id="passwordLength"
+          min="4"
+          max="20"
+          value="12"
+          oninput="handleOpacity(this)"
+          onblur="setDefaultIfEmpty(this)"
+        />
+        <span id="defaultLabel">(Default)</span>
+      </div>
+      <div id="lengthWarning" style="color: red; font-size: 0.9em; display: none">
+        Password length must be between 4 and 20.
+      </div>
+
+      <h3><i>Exclude</i></h3>
+      <div class="checkbox-group">
+        <label class="checkbox"
+          ><input type="checkbox" id="excludeSpecial" /> Special
+          Characters</label
+        >
+        <label class="checkbox"
+          ><input type="checkbox" id="excludeNumbers" /> Numbers</label
+        >
+        <label class="checkbox"
+          ><input type="checkbox" id="excludeUpper" /> Uppercase Letters</label
+        >
+        <label class="checkbox"
+          ><input type="checkbox" id="excludeLower" /> Lowercase Letters</label
+        >
+      </div>
+      <div class="display">
+        <input type="text" readonly id="password" placeholder="Password" /><img
+          src="./Assets/Custom-Icon-Design-Mono-General-2-Copy.512.png"
+          onclick="copyPass()"
+        />
+      </div>
+      <button onclick="createPass()">
+        <img src="./Assets/icons8-flash-24.png" />Generate Password
+      </button>
+    </div>
+    <script src="./script.js" async defer></script>
+  </body>
 </html>
